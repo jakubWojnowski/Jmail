@@ -3508,6 +3508,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "D:\\studia\\studia\\Jmail\\Jmail.MVC\\Jmail.Application\\Jmail.Application.csproj",
       "Jmail.Application >= 1.0.0",
       "Jmail.Infrastructure >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 7.0.5"
@@ -3520,11 +3521,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\studia\\studia\\ProjektMVC\\Jmail.MVC\\Jmail.MVC.csproj",
+      "projectUniqueName": "D:\\studia\\studia\\Jmail\\Jmail.MVC\\Jmail.MVC.csproj",
       "projectName": "Jmail.MVC",
-      "projectPath": "D:\\studia\\studia\\ProjektMVC\\Jmail.MVC\\Jmail.MVC.csproj",
+      "projectPath": "D:\\studia\\studia\\Jmail\\Jmail.MVC\\Jmail.MVC.csproj",
       "packagesPath": "C:\\Users\\jakub\\.nuget\\packages\\",
-      "outputPath": "D:\\studia\\studia\\ProjektMVC\\Jmail.MVC\\obj\\",
+      "outputPath": "D:\\studia\\studia\\Jmail\\Jmail.MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3546,11 +3547,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\studia\\studia\\ProjektMVC\\Jmail.Application\\Jmail.Application.csproj": {
-              "projectPath": "D:\\studia\\studia\\ProjektMVC\\Jmail.Application\\Jmail.Application.csproj"
+            "D:\\studia\\studia\\Jmail\\Jmail.Application\\Jmail.Application.csproj": {
+              "projectPath": "D:\\studia\\studia\\Jmail\\Jmail.Application\\Jmail.Application.csproj"
             },
-            "D:\\studia\\studia\\ProjektMVC\\Jmail.Infrastructure\\Jmail.Infrastructure.csproj": {
-              "projectPath": "D:\\studia\\studia\\ProjektMVC\\Jmail.Infrastructure\\Jmail.Infrastructure.csproj"
+            "D:\\studia\\studia\\Jmail\\Jmail.Infrastructure\\Jmail.Infrastructure.csproj": {
+              "projectPath": "D:\\studia\\studia\\Jmail\\Jmail.Infrastructure\\Jmail.Infrastructure.csproj"
+            },
+            "D:\\studia\\studia\\Jmail\\Jmail.MVC\\Jmail.Application\\Jmail.Application.csproj": {
+              "projectPath": "D:\\studia\\studia\\Jmail\\Jmail.MVC\\Jmail.Application\\Jmail.Application.csproj"
             }
           }
         }
@@ -3594,5 +3598,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.103\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'D:\\studia\\studia\\Jmail\\Jmail.MVC\\Jmail.Application\\Jmail.Application.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "D:\\studia\\studia\\Jmail\\Jmail.MVC\\Jmail.Application\\Jmail.Application.csproj",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

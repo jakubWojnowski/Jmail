@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MDDqXgBMpNLCtLMam5KqCyHONGcQPdmwChAbhsRAk16BE00sNBPER1SRo3kJdeMxEEZcgEnQoeIkAfrUvspOAw==",
+  "dgSpecHash": "83SmdQ6qigcMnuYCkoajws/dD1vUqZ/Q72OPXWGbkaD4DI9yT9lwn0/YD0+VQZ7AV7L/nFpwwd9q4A8hglaKIg==",
   "success": true,
-  "projectFilePath": "D:\\studia\\studia\\ProjektMVC\\Jmail.Domain\\Jmail.Domain.csproj",
+  "projectFilePath": "D:\\studia\\studia\\Jmail\\Jmail.Domain\\Jmail.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

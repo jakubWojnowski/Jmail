@@ -3501,11 +3501,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\studia\\studia\\ProjektMVC\\Jmail.Infrastructure\\Jmail.Infrastructure.csproj",
+      "projectUniqueName": "D:\\studia\\studia\\Jmail\\Jmail.Infrastructure\\Jmail.Infrastructure.csproj",
       "projectName": "Jmail.Infrastructure",
-      "projectPath": "D:\\studia\\studia\\ProjektMVC\\Jmail.Infrastructure\\Jmail.Infrastructure.csproj",
+      "projectPath": "D:\\studia\\studia\\Jmail\\Jmail.Infrastructure\\Jmail.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\jakub\\.nuget\\packages\\",
-      "outputPath": "D:\\studia\\studia\\ProjektMVC\\Jmail.Infrastructure\\obj\\",
+      "outputPath": "D:\\studia\\studia\\Jmail\\Jmail.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -3527,8 +3527,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\studia\\studia\\ProjektMVC\\Jmail.Application\\Jmail.Application.csproj": {
-              "projectPath": "D:\\studia\\studia\\ProjektMVC\\Jmail.Application\\Jmail.Application.csproj"
+            "D:\\studia\\studia\\Jmail\\Jmail.Application\\Jmail.Application.csproj": {
+              "projectPath": "D:\\studia\\studia\\Jmail\\Jmail.Application\\Jmail.Application.csproj"
             }
           }
         }

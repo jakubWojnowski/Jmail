@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "T/+mO82rhaOw++HU2UPUZNR3pY0IWFJ5VOJo4Y+LWee0cO3F+Exs6p4gS6dXm9BjkbbKsLDXMmlROkO/ZdHNgQ==",
+  "dgSpecHash": "l4zVuApL4FEdAZuk2idCAZ7WqVEhEI44j2HNJUWrp7ckj+SIz1iLoj0mFqZZfWqU6lTeIUgj2MrMl6PYMsjVUA==",
   "success": true,
-  "projectFilePath": "D:\\studia\\studia\\ProjektMVC\\Jmail.Infrastructure\\Jmail.Infrastructure.csproj",
+  "projectFilePath": "D:\\studia\\studia\\Jmail\\Jmail.Infrastructure\\Jmail.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jakub\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

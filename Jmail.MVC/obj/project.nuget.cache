@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HWJeQ1TgPbXU06hIx9gb6zn6yyfp54UUK1I100CBhnflYgLaCf61BAK/epDmh+CaAeSTmdx69OUiJ/paPg2DHg==",
-  "success": true,
-  "projectFilePath": "D:\\studia\\studia\\ProjektMVC\\Jmail.MVC\\Jmail.MVC.csproj",
+  "dgSpecHash": "umzO2wIgn8Z7VL2KiLepWbm8OzlqahZALNCVtaezici1J1qc7tlzAB0qRmb2jy+HljNT8ocVb8NzlxB0k8K7Ig==",
+  "success": false,
+  "projectFilePath": "D:\\studia\\studia\\Jmail\\Jmail.MVC\\Jmail.MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jakub\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
@@ -72,5 +72,15 @@
     "C:\\Users\\jakub\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'D:\\studia\\studia\\Jmail\\Jmail.MVC\\Jmail.Application\\Jmail.Application.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "D:\\studia\\studia\\Jmail\\Jmail.MVC\\Jmail.Application\\Jmail.Application.csproj",
+      "targetGraphs": [
+        "net7.0"
+      ]
+    }
+  ]
 }

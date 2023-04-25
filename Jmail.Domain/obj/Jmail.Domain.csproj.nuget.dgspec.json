@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\studia\\studia\\ProjektMVC\\Jmail.Domain\\Jmail.Domain.csproj": {}
+    "D:\\studia\\studia\\Jmail\\Jmail.Domain\\Jmail.Domain.csproj": {}
   },
   "projects": {
-    "D:\\studia\\studia\\ProjektMVC\\Jmail.Domain\\Jmail.Domain.csproj": {
+    "D:\\studia\\studia\\Jmail\\Jmail.Domain\\Jmail.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\studia\\studia\\ProjektMVC\\Jmail.Domain\\Jmail.Domain.csproj",
+        "projectUniqueName": "D:\\studia\\studia\\Jmail\\Jmail.Domain\\Jmail.Domain.csproj",
         "projectName": "Jmail.Domain",
-        "projectPath": "D:\\studia\\studia\\ProjektMVC\\Jmail.Domain\\Jmail.Domain.csproj",
+        "projectPath": "D:\\studia\\studia\\Jmail\\Jmail.Domain\\Jmail.Domain.csproj",
         "packagesPath": "C:\\Users\\jakub\\.nuget\\packages\\",
-        "outputPath": "D:\\studia\\studia\\ProjektMVC\\Jmail.Domain\\obj\\",
+        "outputPath": "D:\\studia\\studia\\Jmail\\Jmail.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
