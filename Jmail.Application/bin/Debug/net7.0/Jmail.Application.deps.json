@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v7.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v7.0": {
+      "Jmail.Application/1.0.0": {
+        "dependencies": {
+          "Jmail.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Jmail.Application.dll": {}
+        }
+      },
+      "Jmail.Domain/1.0.0": {
+        "runtime": {
+          "Jmail.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Jmail.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Jmail.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

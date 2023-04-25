@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="EfCoreDialogsState">
+    <option name="keyValueStorage">
+      <map>
+        <entry key="Common:1d46abb8-35e4-43dc-afaa-a5260fa4902c:dbContext" value="Jmail.Infrastructure.Persistance.JmailDbContext" />
+        <entry key="Common:445d2502-eb6c-4cef-84cd-13b3c3564b43:dbContext" value="Jmail.Infrastructure.Persistance.JmailDbContext" />
+        <entry key="Common:buildConfiguration" value="Debug" />
+        <entry key="Common:noBuild" value="false" />
+        <entry key="Common:outputFolder" value="Migrations" />
+        <entry key="Common:useDefaultConnection" value="true" />
+      </map>
+    </option>
+  </component>
+</project>

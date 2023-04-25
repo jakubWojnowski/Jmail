@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="images" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\Content\main.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jmail.Application\Jmail.Application.csproj" />
+    <ProjectReference Include="..\Jmail.Infrastructure\Jmail.Infrastructure.csproj" />
+    <ProjectReference Include="Jmail.Application\Jmail.Application.csproj" />
+  </ItemGroup>
+
+</Project>

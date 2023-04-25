@@ -1,0 +1,10 @@
+﻿services:
+  
+  sql-server-db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    container_name: sqlJmail
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "Jmail1234"
+      ACCEPT_EULA: "Y"
