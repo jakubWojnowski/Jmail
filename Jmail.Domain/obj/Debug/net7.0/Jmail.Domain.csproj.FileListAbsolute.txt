@@ -10,3 +10,15 @@ D:\studia\studia\ProjektMVC\Jmail.Domain\obj\Debug\net7.0\Jmail.Domain.dll
 D:\studia\studia\ProjektMVC\Jmail.Domain\obj\Debug\net7.0\refint\Jmail.Domain.dll
 D:\studia\studia\ProjektMVC\Jmail.Domain\obj\Debug\net7.0\Jmail.Domain.pdb
 D:\studia\studia\ProjektMVC\Jmail.Domain\obj\Debug\net7.0\ref\Jmail.Domain.dll
+D:\studia\studia\Jmail\Jmail.Domain\bin\Debug\net7.0\Jmail.Domain.deps.json
+D:\studia\studia\Jmail\Jmail.Domain\bin\Debug\net7.0\Jmail.Domain.dll
+D:\studia\studia\Jmail\Jmail.Domain\bin\Debug\net7.0\Jmail.Domain.pdb
+D:\studia\studia\Jmail\Jmail.Domain\obj\Debug\net7.0\Jmail.Domain.csproj.AssemblyReference.cache
+D:\studia\studia\Jmail\Jmail.Domain\obj\Debug\net7.0\Jmail.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\studia\studia\Jmail\Jmail.Domain\obj\Debug\net7.0\Jmail.Domain.AssemblyInfoInputs.cache
+D:\studia\studia\Jmail\Jmail.Domain\obj\Debug\net7.0\Jmail.Domain.AssemblyInfo.cs
+D:\studia\studia\Jmail\Jmail.Domain\obj\Debug\net7.0\Jmail.Domain.csproj.CoreCompileInputs.cache
+D:\studia\studia\Jmail\Jmail.Domain\obj\Debug\net7.0\Jmail.Domain.dll
+D:\studia\studia\Jmail\Jmail.Domain\obj\Debug\net7.0\refint\Jmail.Domain.dll
+D:\studia\studia\Jmail\Jmail.Domain\obj\Debug\net7.0\Jmail.Domain.pdb
+D:\studia\studia\Jmail\Jmail.Domain\obj\Debug\net7.0\ref\Jmail.Domain.dll

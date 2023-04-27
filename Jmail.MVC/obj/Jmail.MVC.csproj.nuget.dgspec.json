@@ -48,6 +48,16 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -173,6 +183,14 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.5, )"
@@ -238,9 +256,6 @@
               },
               "D:\\studia\\studia\\Jmail\\Jmail.Infrastructure\\Jmail.Infrastructure.csproj": {
                 "projectPath": "D:\\studia\\studia\\Jmail\\Jmail.Infrastructure\\Jmail.Infrastructure.csproj"
-              },
-              "D:\\studia\\studia\\Jmail\\Jmail.MVC\\Jmail.Application\\Jmail.Application.csproj": {
-                "projectPath": "D:\\studia\\studia\\Jmail\\Jmail.MVC\\Jmail.Application\\Jmail.Application.csproj"
               }
             }
           }

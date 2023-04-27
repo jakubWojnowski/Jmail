@@ -1,4 +1,7 @@
-﻿using Jmail.Infrastructure.Persistance;
+﻿using Jmail.Domain.Interfaces;
+using Jmail.Infrastructure.Persistance;
+using Jmail.Infrastructure.Repositories;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,6 +14,9 @@ public static class ServiceCollectionExtension
     {
         services.AddDbContext<JmailDbContext>(options => options.UseSqlServer(
             configuration.GetConnectionString("Jmail")));
+
+        services.AddScoped<IAccountRepository, AccountRepository>();
+        services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<JmailDbContext>();
     }
     
 }

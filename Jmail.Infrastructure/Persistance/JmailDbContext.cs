@@ -1,11 +1,10 @@
-
-
 using Jmail.Domain.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Jmail.Infrastructure.Persistance;
 
-public class JmailDbContext : DbContext
+public class JmailDbContext : IdentityDbContext
 {
     public JmailDbContext(DbContextOptions<JmailDbContext> options) : base(options)
     {
@@ -18,6 +17,7 @@ public class JmailDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
         //Account
         modelBuilder.Entity<Account>().Property(ac => ac.Email).IsRequired();
         //Message
