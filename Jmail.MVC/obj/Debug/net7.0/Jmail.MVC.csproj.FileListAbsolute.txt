@@ -171,3 +171,6 @@ D:\studia\studia\Jmail\Jmail.MVC\obj\Debug\net7.0\refint\Jmail.MVC.dll
 D:\studia\studia\Jmail\Jmail.MVC\obj\Debug\net7.0\Jmail.MVC.pdb
 D:\studia\studia\Jmail\Jmail.MVC\obj\Debug\net7.0\Jmail.MVC.genruntimeconfig.cache
 D:\studia\studia\Jmail\Jmail.MVC\obj\Debug\net7.0\ref\Jmail.MVC.dll
+D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
+D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\MailKit.dll
+D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\MimeKit.dll

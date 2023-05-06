@@ -8,7 +8,8 @@ public static class ServiceCollectionExtension
 {
     public static void AddApplication(this IServiceCollection services)
     {
-        services.AddScoped<IAccountService, AccountService>();
+       
+        services.AddScoped<IMessageService, MessageService>();
         services.AddAutoMapper(typeof(JmailMappingProfile));
        
     }

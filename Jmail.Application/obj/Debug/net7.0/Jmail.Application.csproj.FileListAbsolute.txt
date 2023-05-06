@@ -28,3 +28,4 @@ D:\studia\studia\Jmail\Jmail.Application\obj\Debug\net7.0\Jmail.Application.dll
 D:\studia\studia\Jmail\Jmail.Application\obj\Debug\net7.0\refint\Jmail.Application.dll
 D:\studia\studia\Jmail\Jmail.Application\obj\Debug\net7.0\Jmail.Application.pdb
 D:\studia\studia\Jmail\Jmail.Application\obj\Debug\net7.0\ref\Jmail.Application.dll
+D:\studia\studia\Jmail\Jmail.Application\bin\Debug\net7.0\Microsoft.Extensions.Configuration.Abstractions.dll
