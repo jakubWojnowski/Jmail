@@ -1,84 +1,155 @@
 ﻿@model IEnumerable<Jmail.Application.MessageDto.MessageDto>
 
-
 @{
     ViewData["Title"] = "MailBox";
 }
 
-<style>
-    form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        max-width: 500px;
-        margin: 0 auto;
-    }
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+           form {
+                   display: flex;
+                   flex-direction: column;
+                   align-items: center;
+                   width: 100%;
+                   max-width: 500px;
+                   margin: 0 auto;
+               }
+            h1 {
+               text-align: center;
+               margin-bottom: 20px;
+           }
+       
+           .table {
+               width: 100%;
+               border-collapse: collapse;
+               margin-bottom: 20px;
+           }
+       
+           .table th,
+           .table td {
+               border: 1px solid #ccc;
+               padding: 10px;
+               text-align: left;
+           }
+       
+           .table th {
+               background-color: #f5f5f5;
+           }
+       
+           .table a {
+               color: #007bff;
+               text-decoration: none;
+           }
+       
+           /*.table a:hover {*/
+           /*    text-decoration: underline;*/
+           /*}*/
+       
+           button {
+               background-color: #007bff;
+               color: #fff;
+               border: none;
+               border-radius: 5px;
+               padding: 10px 20px;
+               font-size: 16px;
+               cursor: pointer;
+           }
+           
+           button:hover {
+               background-color: #0069d9;
+           }
+      .message-content {
+          padding: 20px;
+          background-color: #f8f8f8;
+          border: 1px solid #ddd;
+          border-radius: 5px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 20px;
+          margin-bottom: 20px;
+          display: none;
+          white-space: pre-wrap;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          line-height: 1.5;
+          text-align: center;
+          color: #333;
+      }
+      .message-content p {
+          margin: 0 0 10px;
+      }
+      .message-content strong {
+          font-weight: bold;
+      }
+      .message-content a {
+          color: #007bff;
+          text-decoration: none;
+          font-weight: bold;
+      }
+      .message-content a:hover {
+          text-decoration: underline;
+      }
+      /*.btn-delete-message {*/
+      /*          cursor: pointer;*/
+      /*          color: #dc3545;*/
+      /*          margin-left: 10px;*/
+      /*      }*/
 
-    h1 {
-        text-align: center;
-        margin-bottom: 20px;
-    }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Ustawienie początkowego stanu animacji
+            $(".message-content").hide();
 
-    .table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-bottom: 20px;
-    }
+            // Obsługa zdarzenia kliknięcia na wierszu tabeli
+            $(".table tbody tr").click(function() {
+                // Znajdowanie kontenera z treścią wiadomości
+                var contentContainer = $(this).find(".message-content");
 
-    .table th,
-    .table td {
-        border: 1px solid #ccc;
-        padding: 10px;
-        text-align: left;
-    }
+                // Sprawdzenie czy kontener jest ukryty
+                if (contentContainer.is(":hidden")) {
+                    // Animacja rozwijania kontenera
+                    contentContainer.slideDown("slow");
+                } else {
+                    // Animacja zwijania kontenera
+                    contentContainer.slideUp("slow");
+                }
+            });
+            
+        });
+        
+    </script>
+</head>
 
-    .table th {
-        background-color: #f5f5f5;
-    }
-
-    .table a {
-        color: #007bff;
-        text-decoration: none;
-    }
-
-    .table a:hover {
-        text-decoration: underline;
-    }
-
-    button {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #0069d9;
-    }
-</style>
-
-<h1>@ViewData["Title"]</h1>
-
-<table class="table">
-    <thead>
-    <tr>
-        <th>Sender</th>
-        <th>Tutle</th>
-        <th>Date</th>
-    </tr>
-    </thead>
-    <tbody>
-    @foreach (var message in Model)
-    {
-        <tr>
-            <td><a asp-page="/MessageSender" >@Html.DisplayFor(modelItem => message.SenderEmail)</a></td>
-            <td><a asp-page="/MessageTitle" >@Html.DisplayFor(modelItem =>message.Title)</a></td>
-            <td><a asp-page="/MessageDate" >@Html.DisplayFor(modelItem =>message.CreationDateTime)</a></td>
-        </tr>
-    }
-    </tbody>
-</table>
+<body>
+    <h1>@ViewData["Title"]</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Sender</th>
+                <th>Title</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var message in Model)
+            {
+                <tr>
+                    <td><a asp-page="/MessageSender">@Html.DisplayFor(modelItem => message.SenderEmail)</a></td>
+                    <td><a asp-page="/MessageTitle">@Html.DisplayFor(modelItem => message.Title)</a></td>
+                    <td><a asp-page="/MessageDate">@Html.DisplayFor(modelItem => message.CreationDateTime)</a></td>
+                    @* <td><button class="btn-delete-message" data-message-id="@message.Title"><i class="fas fa-trash"></i></button>\</td> *@
+                </tr>
+                <tr>
+                    <td colspan="3">
+                       <div class="message-content expandable-content">
+                             @Html.DisplayFor(modelItem => message.Content)
+                         </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>

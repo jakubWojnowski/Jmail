@@ -30,6 +30,6 @@ public class SendMessageValidator : AbstractValidator<SendMessageDto>
             .NotEmpty()
             .MaximumLength(30).WithMessage("title should have max 30 characters");
         RuleFor(m => m.Content)
-            .MaximumLength(500);
+            .MaximumLength(2000);
     }
 }
