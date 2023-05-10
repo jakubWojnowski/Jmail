@@ -176,44 +176,20 @@ namespace Jmail.Infrastructure.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SenderEmail = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    ReciptientEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    AccountId = table.Column<int>(type: "int", nullable: false),
-                    AccountId1 = table.Column<string>(type: "nvarchar(450)", nullable: true)
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SenderEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    RecipientEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreationDateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    FolderId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Messages", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Messages_AspNetUsers_AccountId1",
-                        column: x => x.AccountId1,
-                        principalTable: "AspNetUsers",
-                        principalColumn: "Id");
-                });
-
-            migrationBuilder.CreateTable(
-                name: "FolderMessage",
-                columns: table => new
-                {
-                    FoldersId = table.Column<int>(type: "int", nullable: false),
-                    MessagesId = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_FolderMessage", x => new { x.FoldersId, x.MessagesId });
-                    table.ForeignKey(
-                        name: "FK_FolderMessage_Folders_FoldersId",
-                        column: x => x.FoldersId,
+                        name: "FK_Messages_Folders_FolderId",
+                        column: x => x.FolderId,
                         principalTable: "Folders",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_FolderMessage_Messages_MessagesId",
-                        column: x => x.MessagesId,
-                        principalTable: "Messages",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
@@ -256,14 +232,9 @@ namespace Jmail.Infrastructure.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_FolderMessage_MessagesId",
-                table: "FolderMessage",
-                column: "MessagesId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Messages_AccountId1",
+                name: "IX_Messages_FolderId",
                 table: "Messages",
-                column: "AccountId1");
+                column: "FolderId");
         }
 
         /// <inheritdoc />
@@ -285,19 +256,16 @@ namespace Jmail.Infrastructure.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "FolderMessage");
+                name: "Messages");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "Folders");
-
-            migrationBuilder.DropTable(
-                name: "Messages");
-
-            migrationBuilder.DropTable(
                 name: "AspNetUsers");
+
+            migrationBuilder.DropTable(
+                name: "Folders");
         }
     }
 }

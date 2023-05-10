@@ -23,5 +23,6 @@ public class JmailDbContext : IdentityDbContext
         modelBuilder.Entity<Message>().Property(m => m.ReciptientEmail).IsRequired();
         //Folder
         modelBuilder.Entity<Folder>().Property(f => f.Name).IsRequired();*/
+     
     }
 }

@@ -10,5 +10,7 @@ public class JmailMappingProfile : Profile
     {
 
         CreateMap<SendMessageDto, Message>();
+        CreateMap<MessageDto.MessageDto, Message>();
+        CreateMap<Message, MessageDto.MessageDto>();
     }
 }

@@ -16,6 +16,7 @@ public static class ServiceCollectionExtension
             configuration.GetConnectionString("Jmail")));
         
         services.AddScoped<IMessageRepository, MessageRepository>();
+        services.AddScoped<IAccountRepository, AccountRepository>();
         services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<JmailDbContext>();
     }
     

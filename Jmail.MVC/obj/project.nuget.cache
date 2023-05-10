@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "1HKy/ynogQOt1xo0G4zxMjmLh15MgCle3EgTpmtU2x2Ml2PtlSia8dZmL7yke+yi5ZdtV/q8dMRJKAV+PKzXUQ==",
+  "dgSpecHash": "fpKocQ022SSuPoDP9qBWwfjQFoYhyeuFboRCiluj9NDsbIXgysOJDfvvVsQ642b1MsHj2scgxRAluZGzjzdHig==",
   "success": true,
   "projectFilePath": "D:\\studia\\studia\\Jmail\\Jmail.MVC\\Jmail.MVC.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,9 @@
     "C:\\Users\\jakub\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\bouncycastle.cryptography\\2.1.1\\bouncycastle.cryptography.2.1.1.nupkg.sha512",
+    "C:\\Users\\jakub\\.nuget\\packages\\fluentvalidation\\11.5.1\\fluentvalidation.11.5.1.nupkg.sha512",
+    "C:\\Users\\jakub\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\jakub\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.5.1\\fluentvalidation.dependencyinjectionextensions.11.5.1.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\mailkit\\4.0.0\\mailkit.4.0.0.nupkg.sha512",
     "C:\\Users\\jakub\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\7.0.5\\microsoft.aspnetcore.cryptography.internal.7.0.5.nupkg.sha512",

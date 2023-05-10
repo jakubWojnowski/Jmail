@@ -14,6 +14,13 @@ public class MailController : Controller
     }
 
     [HttpGet]
+    public async Task<ViewResult> Index()
+    {
+        var mails = await _service.GetAll();
+        return View(mails);
+    }
+
+    [HttpGet]
     public IActionResult SendMessage()
     {
         return View();
@@ -22,7 +29,11 @@ public class MailController : Controller
     [HttpPost]
     public async Task<IActionResult> SendMessage(SendMessageDto dto)
     {
+        if (!ModelState.IsValid)
+        {
+            return View(dto);
+        }
         await _service.SendMessage(dto);
-        return RedirectToAction(nameof(SendMessage));
+        return RedirectToAction(nameof(Index));
     }
 }

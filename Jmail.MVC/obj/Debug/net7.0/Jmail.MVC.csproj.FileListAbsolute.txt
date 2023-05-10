@@ -174,3 +174,6 @@ D:\studia\studia\Jmail\Jmail.MVC\obj\Debug\net7.0\ref\Jmail.MVC.dll
 D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\BouncyCastle.Cryptography.dll
 D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\MailKit.dll
 D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\MimeKit.dll
+D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\FluentValidation.dll
+D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
+D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll

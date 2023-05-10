@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Jmail.Infrastructure.Migrations
 {
     [DbContext(typeof(JmailDbContext))]
-    [Migration("20230506111014_alt1")]
-    partial class alt1
+    [Migration("20230510121746_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,21 +24,6 @@ namespace Jmail.Infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("FolderMessage", b =>
-                {
-                    b.Property<int>("FoldersId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MessagesId")
-                        .HasColumnType("int");
-
-                    b.HasKey("FoldersId", "MessagesId");
-
-                    b.HasIndex("MessagesId");
-
-                    b.ToTable("FolderMessage");
-                });
 
             modelBuilder.Entity("Jmail.Domain.Entities.Folder", b =>
                 {
@@ -65,27 +50,31 @@ namespace Jmail.Infrastructure.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("AccountId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("AccountId1")
-                        .HasColumnType("nvarchar(450)");
-
                     b.Property<string>("Content")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ReciptientEmail")
+                    b.Property<DateTime>("CreationDateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("FolderId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("RecipientEmail")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SenderEmail")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AccountId1");
+                    b.HasIndex("FolderId");
 
                     b.ToTable("Messages");
                 });
@@ -292,28 +281,11 @@ namespace Jmail.Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("FolderMessage", b =>
-                {
-                    b.HasOne("Jmail.Domain.Entities.Folder", null)
-                        .WithMany()
-                        .HasForeignKey("FoldersId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Jmail.Domain.Entities.Message", null)
-                        .WithMany()
-                        .HasForeignKey("MessagesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
             modelBuilder.Entity("Jmail.Domain.Entities.Message", b =>
                 {
-                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "Account")
-                        .WithMany()
-                        .HasForeignKey("AccountId1");
-
-                    b.Navigation("Account");
+                    b.HasOne("Jmail.Domain.Entities.Folder", null)
+                        .WithMany("Messages")
+                        .HasForeignKey("FolderId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -365,6 +337,11 @@ namespace Jmail.Infrastructure.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Jmail.Domain.Entities.Folder", b =>
+                {
+                    b.Navigation("Messages");
                 });
 #pragma warning restore 612, 618
         }

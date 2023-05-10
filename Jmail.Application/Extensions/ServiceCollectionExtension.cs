@@ -1,4 +1,8 @@
-﻿using Jmail.Application.Mappings;
+﻿using System.Reflection;
+using FluentValidation;
+using FluentValidation.AspNetCore;
+using Jmail.Application.Mappings;
+using Jmail.Application.MessageDto;
 using Jmail.Application.Services;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -10,7 +14,9 @@ public static class ServiceCollectionExtension
     {
        
         services.AddScoped<IMessageService, MessageService>();
+        services.AddValidatorsFromAssemblyContaining<SendMessageValidator>()
+            .AddFluentValidationAutoValidation()
+            .AddFluentValidationClientsideAdapters();
         services.AddAutoMapper(typeof(JmailMappingProfile));
-       
     }
 }

@@ -1,6 +1,8 @@
-﻿using Jmail.Domain.Entities;
+﻿using Jmail.Application.MessageDto;
+using Jmail.Domain.Entities;
 using Jmail.Domain.Interfaces;
 using Jmail.Infrastructure.Persistance;
+using Microsoft.EntityFrameworkCore;
 
 namespace Jmail.Infrastructure.Repositories;
 
@@ -18,4 +20,7 @@ public class MessageRepository : IMessageRepository
         _dbContext.Add(message);
         await _dbContext.SaveChangesAsync();
     }
+
+    public async Task<IEnumerable<Message>> GetAllMessages() => await _dbContext.Messages.ToListAsync();
+
 }
