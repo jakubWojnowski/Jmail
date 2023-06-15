@@ -177,3 +177,6 @@ D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\MimeKit.dll
 D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\FluentValidation.dll
 D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\FluentValidation.AspNetCore.dll
 D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\MediatR.dll
+D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\MediatR.Contracts.dll
+D:\studia\studia\Jmail\Jmail.MVC\bin\Debug\net7.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

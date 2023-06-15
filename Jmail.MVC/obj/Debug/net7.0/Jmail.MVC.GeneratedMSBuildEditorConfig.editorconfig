@@ -32,12 +32,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/studia/studia/Jmail/Jmail.MVC/Views/Mail/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbFxJbmRleC5jc2h0bWw=
+[D:/studia/studia/Jmail/Jmail.MVC/Views/Mail/GetEveryMessage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbFxHZXRFdmVyeU1lc3NhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/studia/studia/Jmail/Jmail.MVC/Views/Mail/SendMessage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbFxTZW5kTWVzc2FnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/studia/studia/Jmail/Jmail.MVC/Views/Mail/ViewMails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFpbFxWaWV3TWFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/studia/studia/Jmail/Jmail.MVC/Views/Shared/Error.cshtml]

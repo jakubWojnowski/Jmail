@@ -4,8 +4,34 @@
     ViewData["Title"] = "MailBox";
 }
 
-<head>
-    <title>@ViewData["Title"]</title>
+<h1>@ViewData["Title"]</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Sender</th>
+            <th>Title</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var message in Model)
+        {
+            <tr>
+                <td><a asp-page="/MessageSender">@message.Content</a></td>
+                <td><a asp-page="/MessageTitle">@message.Title</a></td>
+                <td><a asp-page="/MessageDate">@message.CreationDateTime</a></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div class="message-content expandable-content">
+                        @message.Content
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
     <style>
            form {
                    display: flex;
@@ -97,59 +123,20 @@
       /*      }*/
 
     </style>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            // Ustawienie początkowego stanu animacji
-            $(".message-content").hide();
 
-            // Obsługa zdarzenia kliknięcia na wierszu tabeli
-            $(".table tbody tr").click(function() {
-                // Znajdowanie kontenera z treścią wiadomości
-                var contentContainer = $(this).find(".message-content");
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".message-content").hide();
 
-                // Sprawdzenie czy kontener jest ukryty
-                if (contentContainer.is(":hidden")) {
-                    // Animacja rozwijania kontenera
-                    contentContainer.slideDown("slow");
-                } else {
-                    // Animacja zwijania kontenera
-                    contentContainer.slideUp("slow");
-                }
-            });
-            
-        });
-        
-    </script>
-</head>
+        $(".table tbody tr").click(function() {
+            var contentContainer = $(this).find(".message-content");
 
-<body>
-    <h1>@ViewData["Title"]</h1>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Sender</th>
-                <th>Title</th>
-                <th>Date</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var message in Model)
-            {
-                <tr>
-                    <td><a asp-page="/MessageSender">@Html.DisplayFor(modelItem => message.SenderEmail)</a></td>
-                    <td><a asp-page="/MessageTitle">@Html.DisplayFor(modelItem => message.Title)</a></td>
-                    <td><a asp-page="/MessageDate">@Html.DisplayFor(modelItem => message.CreationDateTime)</a></td>
-                    @* <td><button class="btn-delete-message" data-message-id="@message.Title"><i class="fas fa-trash"></i></button>\</td> *@
-                </tr>
-                <tr>
-                    <td colspan="3">
-                       <div class="message-content expandable-content">
-                             @Html.DisplayFor(modelItem => message.Content)
-                         </div>
-                    </td>
-                </tr>
+            if (contentContainer.is(":hidden")) {
+                contentContainer.slideDown("slow");
+            } else {
+                contentContainer.slideUp("slow");
             }
-        </tbody>
-    </table>
-</body>
+        });
+    });
+</script>

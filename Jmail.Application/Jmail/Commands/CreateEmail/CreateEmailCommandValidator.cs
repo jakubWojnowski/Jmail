@@ -1,15 +1,16 @@
 ﻿using FluentValidation;
+using Jmail.Application.Jmail.Commands.CreateEmail;
 using Jmail.Domain.Interfaces;
 using Microsoft.AspNetCore.Http;
 
 namespace Jmail.Application.MessageDto;
 
-public class SendMessageValidator : AbstractValidator<SendMessageDto>
+public class CreateEmailCommandValidator : AbstractValidator<CreateEmailCommand>
 {
     
     private readonly IAccountRepository _accountRepository;
 
-    public SendMessageValidator( IAccountRepository accountRepository)
+    public CreateEmailCommandValidator( IAccountRepository accountRepository)
     {
         
         _accountRepository = accountRepository;

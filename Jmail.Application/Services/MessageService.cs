@@ -28,27 +28,13 @@ public class MessageService : IMessageService
         _mapper = mapper;
     }
 
-    public async Task SendMessage(SendMessageDto dto)
-    {
-        var message = new MimeMessage();
-        var contentMessage = _mapper.Map<Message>(dto);
-        message.From.Add(MailboxAddress.Parse(dto.SenderEmail));
-        message.To.Add(MailboxAddress.Parse(dto.RecipientEmail));
-        message.Subject = dto.Title;
-        message.Body = new TextPart(TextFormat.Html) { Text = dto.Content };
-        await _messageRepository.SendMessage(contentMessage);
-        using var smtpClient = new MailKit.Net.Smtp.SmtpClient();
-        await smtpClient.ConnectAsync("smtp.ethereal.email", 587,SecureSocketOptions.StartTls);
-        await smtpClient.AuthenticateAsync("dereck.gerhold@ethereal.email","eYF1gaVrBMDHyeTsVH");
-        await smtpClient.SendAsync((MimeMessage)message);
-        await smtpClient.DisconnectAsync(true);
-    }
+ 
 
     public async Task<List<MimeMessage>> ReceiveMessage()
     {
         using var client = new ImapClient();
-        await client.ConnectAsync("dereck.gerhold@ethereal.email", 993, true);
-        await client.AuthenticateAsync("username", "password");
+        await client.ConnectAsync("localhost", 25, true);
+        //await client.AuthenticateAsync("username", "password");
 
         var inbox = client.Inbox;
         await inbox.OpenAsync(FolderAccess.ReadOnly);
@@ -68,12 +54,5 @@ public class MessageService : IMessageService
         return result;
     }
 
-    public async Task<IEnumerable<MessageDto.MessageDto>> GetAll()
-    {
-        var messages = await _messageRepository.GetAllMessages();
-        var dtos = _mapper.Map<IEnumerable<MessageDto.MessageDto>>(messages);
-        return dtos;
-
-    }
-
+  
 }

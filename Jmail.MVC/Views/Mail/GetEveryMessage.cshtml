@@ -1,0 +1,139 @@
+﻿@model IEnumerable<Jmail.Application.MessageDto.MessageAdminDto>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>title</h2>
+
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    .table th,
+    .table td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        text-align: left;
+    }
+
+    .table th {
+        background-color: #f5f5f5;
+    }
+
+    .table a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0069d9;
+    }
+
+    .message-content {
+        padding: 20px;
+        background-color: #f8f8f8;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        display: none;
+        white-space: pre-wrap;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        text-align: center;
+        color: #333;
+    }
+
+    .message-content p {
+        margin: 0 0 10px;
+    }
+
+    .message-content strong {
+        font-weight: bold;
+    }
+
+    .message-content a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .message-content a:hover {
+        text-decoration: underline;
+    }
+</style>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".message-content").hide();
+
+        $(".table tbody tr").click(function() {
+            var contentContainer = $(this).find(".message-content");
+
+            if (contentContainer.is(":hidden")) {
+                contentContainer.slideDown("slow");
+            } else {
+                contentContainer.slideUp("slow");
+            }
+        });
+    });
+</script>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Sender Email</th>
+            <th>Recipient Email</th>
+            <th>Created By Id</th>
+            <th>Creation Date Time</th>
+            <th>Content</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var message in Model)
+        {
+            <tr>
+                <td>@message.Title</td>
+                <td>@message.SenderEmail</td>
+                <td>@message.RecipientEmail</td>
+                <td>@message.CreatedById</td>
+                <td>@message.CreationDateTime</td>
+                <td>@message.Content</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Jmail.Infrastructure.Migrations
 {
     [DbContext(typeof(JmailDbContext))]
-    [Migration("20230510130134_alt3")]
-    partial class alt3
+    [Migration("20230614083955_Initial")]
+    partial class Initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

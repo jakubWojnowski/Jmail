@@ -1,7 +1,7 @@
 ﻿services:
   
   sql-server-db:
-    image: mcr.microsoft.com/mssql/server:2019-latest
+    image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: sqlJmail
     ports:
       - "1433:1433"

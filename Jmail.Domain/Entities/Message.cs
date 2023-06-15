@@ -9,6 +9,8 @@ public class Message
     public string Content { get; set; }
     public string SenderEmail { get; set; }
     public string RecipientEmail { get; set; }
+    public string? CreatedById { get; set; }
+    public IdentityUser? CreatedBy { get; set; }
     
     public DateTime CreationDateTime { get; set; }
 

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Jmail.Infrastructure.Migrations
 {
     [DbContext(typeof(JmailDbContext))]
-    [Migration("20230510121746_Initial")]
-    partial class Initial
+    [Migration("20230614232728_alt2")]
+    partial class alt2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -54,6 +54,9 @@ namespace Jmail.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CreatedById")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime>("CreationDateTime")
                         .HasColumnType("datetime2");
 
@@ -73,6 +76,8 @@ namespace Jmail.Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CreatedById");
 
                     b.HasIndex("FolderId");
 
@@ -283,9 +288,15 @@ namespace Jmail.Infrastructure.Migrations
 
             modelBuilder.Entity("Jmail.Domain.Entities.Message", b =>
                 {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "CreatedBy")
+                        .WithMany()
+                        .HasForeignKey("CreatedById");
+
                     b.HasOne("Jmail.Domain.Entities.Folder", null)
                         .WithMany("Messages")
                         .HasForeignKey("FolderId");
+
+                    b.Navigation("CreatedBy");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
