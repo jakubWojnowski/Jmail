@@ -25,9 +25,15 @@ public class AccountRepository : IAccountRepository
         var user = await _userManager.FindByIdAsync(id);
         if (user == null)
         {
-            throw new KeyNotFoundException(); 
+            throw new KeyNotFoundException();
         }
+
+        // Usuń wszystkie wiadomości powiązane z użytkownikiem
+        var messages = _dbContext.Messages.Where(m => m.CreatedById == id);
+        _dbContext.Messages.RemoveRange(messages);
+
         await _userManager.DeleteAsync(user);
+        await _dbContext.SaveChangesAsync();
     }
 
    

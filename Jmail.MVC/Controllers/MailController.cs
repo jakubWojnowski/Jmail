@@ -1,4 +1,5 @@
-﻿using Jmail.Application.AdminPanel.Queries;
+﻿using Jmail.Application.AdminPanel.Commands;
+using Jmail.Application.AdminPanel.Queries;
 using Jmail.Application.Jmail.Commands.CreateEmail;
 using Jmail.Application.Jmail.Queries.GetAllEmails;
 using Jmail.Application.MessageDto;
@@ -17,6 +18,20 @@ public class MailController : Controller
     public MailController(IMediator mediator)
     {
         _mediator = mediator;
+    }
+    
+    [Authorize(Roles = "Admin")]
+    public async Task<IActionResult> GetEveryAccount()
+    {
+        var accounts = await _mediator.Send(new GetAllAccountQuery());
+        return View(accounts);
+    }
+    [Authorize(Roles = "Admin")]
+    [HttpDelete("/users/{userId}")]
+    public async Task<IActionResult> DeleteUser(string userId)
+    {
+        await _mediator.Send(new DeleteUserCommand { UserId = userId });
+        return NoContent(); // 204 No Content
     }
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> GetEveryMessage()
