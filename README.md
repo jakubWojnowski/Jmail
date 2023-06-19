@@ -7,18 +7,12 @@ The application is built using Clean Architecture, divided into four layers: pre
 # Technologies
 The project is implemented using the following technologies:
 
-ASP.NET Core MVC
-
-Docker
-
-Entity Framework
-
-ASP.NET Core Identity
-
-Mediator CQRS
-
-Clean Architecture
-
+- ASP.NET Core MVC  
+- Docker  
+- Entity Framework  
+- ASP.NET Core Identity  
+- Mediator CQRS  
+- Clean Architecture  
 
 # Requirements
 To run this project, you need Docker installed.
