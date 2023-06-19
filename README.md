@@ -8,7 +8,9 @@ The application is built using Clean Architecture, divided into four layers: pre
 The project is implemented using the following technologies:
 
 ASP.NET Core MVC
+
 Docker
+
 Entity Framework
 ASP.NET Core Identity
 Mediator CQRS
