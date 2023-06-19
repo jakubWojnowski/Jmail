@@ -1,5 +1,5 @@
 # Jmail
-#Description
+# Description
 Jmail is a mail communication application created with ASP.NET Core MVC. The application provides an interface for sending messages and a mailbox screen where received messages can be viewed. Jmail also includes an admin role, which has access to messages between users within the application and can delete accounts.
 
 The application is built using Clean Architecture, divided into four layers: presentation, application, domain, and infrastructure. All of this is implemented using Mediator CQRS, making the application scalable and easy to maintain.
