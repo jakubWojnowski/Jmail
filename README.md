@@ -24,25 +24,14 @@ Clean Architecture
 To run this project, you need Docker installed.
 
 # Installation
-To run this project, follow these steps:
-
-Clone the repository to your local computer:
-
-git clone https://github.com/jakubWojnowski/Jmail.git
-
-Navigate to the project folder:
-
-cd Jmail
-
-Run the Docker command:
-
-docker-compose up -d
-
-Update the database:
-
-Update-Database
-
-Registration and login
+1. Clone the repository to your local computer:  
+```git clone https://github.com/jakubWojnowski/Jmail.git```  
+2. Navigate to the project folder:  
+```cd Jmail```  
+3. Run the Docker command:  
+```docker-compose up -d```  
+4. Update the database:  
+```Update-Database```  
 
 In order to use the application functions, you first need to register. You can do this by clicking the registration button in the top right corner of the page. Registration and login are implemented using ASP.NET Core Identity.
 
