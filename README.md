@@ -13,10 +13,11 @@ Entity Framework
 ASP.NET Core Identity
 Mediator CQRS
 Clean Architecture
-Requirements
+
+# Requirements
 To run this project, you need Docker installed.
 
-Installation
+# Installation
 To run this project, follow these steps:
 
 Clone the repository to your local computer:
@@ -30,12 +31,12 @@ Update-Database
 Registration and login
 In order to use the application functions, you first need to register. You can do this by clicking the registration button in the top right corner of the page. Registration and login are implemented using ASP.NET Core Identity.
 
-Usage
+# Usage
 After installation, launch, and registration, the application enables sending and receiving messages between users. As an administrator, you also have access to messages between users within the application and can delete accounts.
 
-Future updates
+# Future updates
 Additional features and improvements are planned. Details will be provided soon.
 
-Support
+# Support
 If you encounter any problems during installation or usage of the application, create an issue in the Issues section on GitHub.
 
