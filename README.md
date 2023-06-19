@@ -4,7 +4,7 @@ Jmail is a mail communication application created with ASP.NET Core MVC. The app
 
 The application is built using Clean Architecture, divided into four layers: presentation, application, domain, and infrastructure. All of this is implemented using Mediator CQRS, making the application scalable and easy to maintain.
 
-Technologies
+# Technologies
 The project is implemented using the following technologies:
 
 ASP.NET Core MVC
