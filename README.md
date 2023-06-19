@@ -12,9 +12,13 @@ ASP.NET Core MVC
 Docker
 
 Entity Framework
+
 ASP.NET Core Identity
+
 Mediator CQRS
+
 Clean Architecture
+
 
 # Requirements
 To run this project, you need Docker installed.
@@ -23,14 +27,23 @@ To run this project, you need Docker installed.
 To run this project, follow these steps:
 
 Clone the repository to your local computer:
+
 git clone https://github.com/jakubWojnowski/Jmail.git
+
 Navigate to the project folder:
+
 cd Jmail
+
 Run the Docker command:
+
 docker-compose up -d
+
 Update the database:
+
 Update-Database
+
 Registration and login
+
 In order to use the application functions, you first need to register. You can do this by clicking the registration button in the top right corner of the page. Registration and login are implemented using ASP.NET Core Identity.
 
 # Usage
